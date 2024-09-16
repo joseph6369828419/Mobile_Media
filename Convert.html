@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Responsive Login Form</title>
+    <title>Responsive Login Form with Box Model</title>
     <style>
         * {
             margin: 0;
@@ -15,9 +15,16 @@
             display: flex;
             justify-content: center;
             align-items: center;
+            flex-direction: column;
             height: 100vh;
             background-color: #f0f0f0;
             font-family: Arial, sans-serif;
+        }
+
+        p {
+            margin: 10px 0;
+            font-size: 18px;
+            text-align: center;
         }
 
         .login-container {
@@ -72,6 +79,27 @@
             background-color: #0056b3;
         }
 
+        .box-container {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+        }
+
+        .box {
+            width: 60px;
+            height: 60px;
+            background-color: #007BFF;
+            padding: 10px;
+            border: 2px solid #000;
+            margin: 10px;
+            color: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 14px;
+            text-align: center;
+        }
+
         @media (max-width: 768px) {
             .login-container {
                 padding: 15px;
@@ -80,6 +108,15 @@
 
             .login-btn {
                 font-size: 15px;
+            }
+
+            .box-container {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .box {
+                margin: 5px 0;
             }
         }
 
@@ -106,6 +143,12 @@
     </style>
 </head>
 <body>
+
+    <!-- Paragraphs for extra text -->
+    <p>Welcome to the login page!</p>
+    <p>Please enter your credentials below.</p>
+
+    <!-- Login Form -->
     <div class="login-container">
         <h2>Login</h2>
         <form>
@@ -120,5 +163,15 @@
             <button type="submit" class="login-btn">Login</button>
         </form>
     </div>
+
+    <!-- Box Model Demo -->
+    <div class="box-container">
+        <div class="box">Box 1</div>
+        <div class="box">Box 2</div>
+        <div class="box">Box 3</div>
+        <div class="box">Box 4</div>
+        <div class="box">Box 5</div>
+    </div>
+
 </body>
 </html>
